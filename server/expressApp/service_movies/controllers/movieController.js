@@ -42,11 +42,13 @@ class movieController {
 			tags : req.body.tags
         })
 
+        console.log(movie)
         movie.save() 
             .then(_ => {
                 res.status(201).json(movie);
             })
             .catch(err => {
+                console.log(err)
                 res.status(500).json({
                     message: 'Error when creating movie',
                     error: err

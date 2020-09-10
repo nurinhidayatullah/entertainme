@@ -3,8 +3,8 @@ const seriesModel = require('../models/seriesModel.js');
 class seriesController {
     static list (req, res) {
         seriesModel.find({})
-            .then(seriess => {
-                res.json(seriess);
+            .then(series => {
+                res.json(series);
             })
             .catch(err => {
                 res.status(500).json({

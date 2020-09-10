@@ -1,0 +1,17 @@
+{
+  "name": "orchestrator",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "cookie-parser": "^1.4.5",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "http-errors": "^1.8.0",
+    "ioredis": "^4.17.3",
+    "morgan": "^1.10.0"
+  }
+}
