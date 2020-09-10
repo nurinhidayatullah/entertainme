@@ -33,7 +33,7 @@ class movieController {
             method: 'GET'
         })
             .then(movie => {
-                res.status(200).json(movie)
+                res.status(200).json(movie.data)
             })
             .catch(err => {
                 res.status(500).json({

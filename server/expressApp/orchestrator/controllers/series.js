@@ -33,7 +33,7 @@ class seriesController {
             method: 'GET'
         })
             .then(series => {
-                res.status(200).json(series)
+                res.status(200).json(series.data)
             })
             .catch(err => {
                 res.status(500).json({
