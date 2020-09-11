@@ -26,6 +26,26 @@ class MovieControl {
         } 
     }
 
+    static async show (req, res, next) {
+        let {id} = req.params
+        try {
+            await client.connect()
+            const entertainme = client.db('entertain-me-mongo')
+            const collection = entertainme.collection('movies')
+            const movie = await collection.findOne({_id: ObjectID(id)})
+            if(!movie) {
+                throw res.status(404).json({
+                    message: 'No such movie'
+                });
+            }
+            res.status(200).json(movie)
+        } catch(err) {
+            res.status(500).json({
+                message: 'Error when getting Movie',
+                error: err
+            });
+        }
+    }
     static async list (req, res, next) {
         try {
             await client.connect()
@@ -50,7 +70,6 @@ class MovieControl {
             const entertainme = client.db('entertain-me-mongo')
             const collection = entertainme.collection('movies')
             const movie = await collection.findOne({_id: ObjectID(id)})
-            console.log(movie)
             if(!movie) {
                 throw res.status(404).json({
                     message: 'No such movie'

@@ -25,7 +25,26 @@ class TvSeriesController {
             });
         } 
     }
-
+    static async show (req, res, next) {
+        let {id} = req.params
+        try {
+            await client.connect()
+            const entertainme = client.db('entertain-me-mongo')
+            const collection = entertainme.collection('series')
+            const series = await collection.findOne({_id: ObjectID(id)})
+            if(!series) {
+                throw res.status(404).json({
+                    message: 'No such Tv Series'
+                });
+            }
+            res.status(200).json(series)
+        } catch (err) {
+            res.status(500).json({
+                message: 'Error when getting Tv Series',
+                error: err
+            });
+        }
+    }
     static async list (req, res, next) {
         try {
             await client.connect()
@@ -51,7 +70,7 @@ class TvSeriesController {
             const collection = entertainme.collection('series')
             const series = await collection.findOne({_id: ObjectID(id)})
             if(!series) {
-                return res.status(404).json({
+                throw res.status(404).json({
                     message: 'No such Tv Series'
                 });
             }

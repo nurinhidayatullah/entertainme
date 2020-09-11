@@ -3,6 +3,7 @@ const router = express.Router();
 const MovieController = require('../controllers/movie')
 
 router.get('/movies', MovieController.list)
+router.get('/movies/:id', MovieController.show)
 router.post('/movies', MovieController.create)
 router.put('/movies/:id', MovieController.update)
 router.delete('/movies/:id', MovieController.delete)

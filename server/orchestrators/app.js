@@ -1,27 +1,18 @@
-const createError = require('http-errors');
-const express = require('express');
-const cookieParser = require('cookie-parser');
-const logger = require('morgan');
+const {ApolloServer, gql, makeExecutableSchema } = require('apollo-server')
+const MovieSchema = require('./Schema/MovieSchema')
+const SeriesSchema = require('./Schema/SeriesSchema')
 
-const indexRouter = require('./routes/entertainme');
+const typeDefs = gql `
+    type Query
+    type Mutation
+`
+const schema = makeExecutableSchema({
+    typeDefs: [typeDefs, MovieSchema.typeDefs, SeriesSchema.typeDefs],
+    resolvers: [MovieSchema.resolvers, SeriesSchema.resolvers]
+})
 
-const app = express();
+const server = new ApolloServer({schema})
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-
-app.use('/entertainme', indexRouter);
-
-app.use((req, res, next) => {
-  next(createError(404));
-});
-
-app.use((err, req, res, next) => {
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
-  res.status(err.status || 500);
-});
-
-module.exports = app;
+server.listen(5000).then(({ url }) => {
+    console.log(`🚀  Server ready at ${url}`);
+  });
