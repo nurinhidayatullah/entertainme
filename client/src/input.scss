@@ -1,0 +1,478 @@
+$font-audiowide: Audiowide, cursive;
+$font-viga: 'Viga', sans-serif;
+
+body {
+    margin: 0;
+}
+.success {
+    background-color: green;
+}
+
+.fail {
+    background-color: red;
+}
+.landing {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('./images/pexels-dmitry-demidov-3921000.jpg') no-repeat center fixed;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    font-family: $font-viga;
+    .landing-content {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        text-align: center;
+        align-items: center;
+        height: 97vh;
+        .intro {
+            grid-column: 1/2;
+            h1 {
+                margin: 0;
+                font-family: $font-audiowide;
+                font-size: 6vw;
+            }
+            h6 {
+                margin: 0;
+                font-size: 2vw;
+                font-family: $font-audiowide;
+                letter-spacing: 0.8vw;
+            }
+            button {
+                margin-top: 1em;
+                background-color: green;
+                border: none;
+                font-size: 32px;
+                padding: 0.5em;
+                border-radius: 50px;
+                a {
+                    color: white;
+                    font-family: $font-viga;
+                    text-decoration: none;
+                }
+            }
+        }
+        .preview {
+            grid-column: 2/2;
+        }
+    }
+}
+
+.posters {
+    margin-top: 2em;
+}
+
+.index__container___1eyTh.index__chain___2Fk0I {
+    margin-left: 1em;
+    align-items: flex-start;
+}
+
+nav {
+    padding: 1em;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 95vw;
+    object-fit: cover;
+    color: white;
+    ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        span {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            #film {
+                animation: animation 1000ms linear both;
+            }
+            img {
+                padding-right: 5em;
+                padding-left: 1em;
+            }
+            li {
+                list-style-type: none;
+                animation: animation 1000ms linear both 1000ms;
+                a {
+                    font-size: 24px;
+                    color: white;
+                    text-decoration: none;
+                    span {
+                        img {
+                            padding: 0;
+                            padding-right: 0.5em;
+                            margin-left: 6em;
+                        }
+                        p{
+                            padding: 0;
+                            margin: 0;
+                        }
+                    }
+                }
+                a:hover span p {
+                    border-bottom: 2px white solid;
+                }
+            }
+            .list {
+                padding-right: 1em;
+            }
+            .crumb {
+                padding-right: 2em;
+            }
+            h1{
+                font-family: $font-audiowide;
+                font-size: 32px;;
+                margin: 0;
+                justify-content: center;
+            }
+            .the-font {
+                h3 {
+                    display: inline-block;
+                    font-size: 12px;
+                    margin: 0;
+                    padding-top: 4px;
+                    padding-bottom: 10px;
+                    margin-right: 4px;
+                    border-bottom: 4px white solid;
+                }
+
+            }
+            span {
+                h4{
+                    margin-bottom: 0;
+                    
+                }
+            }
+        }
+    }
+}
+ .no-file {
+    text-align: center;
+ }
+.home {
+    min-height: 100vh;
+    background: url('../src/images/body-bg.gif') fixed;
+    color: white;
+    .home-page {
+        padding-top: 13vh;
+        padding-left: 8px;
+        padding-right: 8px;
+        .sub-nav {
+            border-top: 2px dashed rgba($color: #fff, $alpha: 0.5);
+            padding-top: 10px;
+            border-bottom: 2px dashed rgba($color: #fff, $alpha: 0.5);
+            padding-bottom: 10px;
+            .list-title {
+                text-align: center;
+                margin: 0;
+            }
+        }
+        .add-home {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                h1 {
+                    margin: 0;
+                    font-size: 20px;
+                    color: white;
+                }
+                img {
+                    margin-right: 1vw;
+                }
+            }
+            a:hover {
+                h1 {
+                    color: green;
+                }
+            }
+        }
+    }
+}
+
+.add {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../src/images/pexels-engin-akyurt-1435833.jpg') no-repeat fixed;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    .add-content{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        // text-align: center;
+        align-items: center;
+        height: 100vh;
+        .add-intro {
+            grid: 1/2;
+            padding-left: 10vw;
+            h1{
+                font-family: $font-audiowide;
+                margin: 0;
+                font-size: 4vw;
+            }
+            h2{
+                font-family: $font-audiowide;
+                margin: 0;
+                letter-spacing: 10px;
+            }
+        }
+        .add-form {
+            grid: 2/2;
+            padding-left: 5vw;
+            label {
+                font-family: $font-viga;
+                font-size: 1.2em;
+            }
+            input {
+                background: none;
+                font-family: $font-viga;
+                margin-top: 1em;
+                margin-bottom: 1em;
+                width: 25vw;
+                border: none;
+                border-bottom: 1px white solid;
+                color: white;
+                margin-right: 1em;
+            }
+            button {
+                cursor: pointer;
+            }
+            .btn {
+                min-width: 10vw;
+                float: right;
+                background-color: transparent;
+                color: white;
+                border: none;
+                font-size: 2vw;
+                margin-top: 5vh;
+                font-family: $font-viga;
+            }
+            .btn1 {
+                margin-right: 5vw;
+            }
+            .btn-2 {
+                min-width: 10vw;
+                float: right;
+                background-color: transparent;
+                color: white;
+                border: none;
+                font-size: 2vw;
+                margin-top: 5vh;
+                margin-right: 20vw;
+                font-family: $font-viga;
+            }
+        }
+    }
+}
+
+.container {
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    .container-content {
+        width: 75vw;
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            justify-items: center;
+            grid-gap: 10px;
+            .movie {
+              padding-bottom: 10vh;
+              width: 150px;
+              height: 200px;
+              img {
+                  display: block;
+                  margin-right: auto;
+                  margin-left: auto;
+                  max-width: 100%;
+                  max-height: 100%;
+                  object-fit: cover;
+              }
+              h5 {
+                padding-left: 0.5vw ;
+                margin: 0;
+                margin-top: 2vh;
+              }
+          }
+        }
+    }
+    .container-list {
+        flex-direction: row;
+        width: 75vw;
+    }
+}
+
+.checked {
+    color: orange;
+}
+
+.container-overview {
+    width: 150px;
+    height: 200px;
+    position: absolute;
+    margin: 0;
+    text-align: center;
+    align-items: center;
+    // cursor: pointer;
+    .overview {
+        visibility: hidden;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        width: 150px;
+        height: 200px;
+        z-index: 10;
+        h5 {
+            color: rgb(199, 202, 14);
+        }
+        .edit-delete {
+            padding: 10px;
+            padding-bottom: 10px;
+            .edit {
+                float: left;
+            }
+            .delete {
+                float: right;
+            }
+        }
+    }
+}
+
+.container-overview:hover .overview {
+    visibility: visible;
+}
+
+.tag {
+    small {
+        display: inline;
+        padding: 4px;
+        border: 1px solid white;
+        border-radius: 8px;
+        margin: 5px;
+        button {
+            background-color: transparent;
+            border: none;
+        }
+    }
+}
+
+.buttons {
+    display: flex;
+}
+.carousel .slide img {
+    max-width: 50%;
+}
+
+.carousel .slide {
+    background-color: transparent;
+}
+.list-item {
+    width: 75%;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    height: 40vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5vh;
+    border-left: silver 10px solid;
+    display: flex;
+    align-items: flex-start;
+    color: black;
+    font-family: $font-viga;
+    .list-image {
+        height: 40vh;
+    }
+    .list-content {
+        width: 100%;
+        .content-title {
+            border-bottom: 2px dashed rgba($color: #000000, $alpha: 0.5);
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            h4 {
+                margin: 0.5em 10px;
+            }
+            small {
+                display: inline-block;
+                color: white;
+                margin: 0 10px;
+                border: 1px transparent solid;
+                padding: 0.3em;
+                border-radius: 10%;
+                background-color: green;
+            }
+        }
+        .description {
+            margin: 0 10px;
+            h5{
+                margin: 5px 0;
+            }
+            p{
+                margin: 0;
+                font-size: 0.7em;
+            }
+        }
+    }
+}
+  
+  @keyframes animation { 
+    0% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -100, 0, 1); }
+    3.2% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -67.61, 0, 1); }
+    6.31% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -46.162, 0, 1); }
+    12.51% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -21.364, 0, 1); }
+    18.82% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -9.667, 0, 1); }
+    25.03% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -4.383, 0, 1); }
+    37.54% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.859, 0, 1); }
+    50.05% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.159, 0, 1); }
+    100% { transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
+  }
+  
+.logo {
+	animation: logoAnimate 2000ms linear both;
+}
+
+@keyframes logoAnimate {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.intro {
+	-webkit-animation: slide-in-bck-left 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: slide-in-bck-left 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    button {
+        animation: logoAnimate 2000ms linear both 1000ms;
+    }
+}
+
+@-webkit-keyframes slide-in-bck-left {
+    0% {
+      -webkit-transform: translateZ(700px) translateX(-400px);
+              transform: translateZ(700px) translateX(-400px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0) translateX(0);
+              transform: translateZ(0) translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-bck-left {
+    0% {
+      -webkit-transform: translateZ(700px) translateX(-400px);
+              transform: translateZ(700px) translateX(-400px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0) translateX(0);
+              transform: translateZ(0) translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  
+  

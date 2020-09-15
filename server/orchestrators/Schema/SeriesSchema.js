@@ -35,6 +35,7 @@ const resolvers = {
             } else {
                 let {data} = await axios.get('http://localhost:5002/tv')
                 await redis.set('series', JSON.stringify(data))
+                console.log(data)
                 return data
             }
         },
@@ -46,19 +47,19 @@ const resolvers = {
     },
     Mutation: {
         async addEpisode(_, args) {
-            redis.del('series')
+            await redis.del('series')
             let {data} = await axios.post('http://localhost:5002/tv', args)
             return data
         },
         async updateEpisode(_, args) {
-            redis.del('series')
+            await redis.del('series')
             let {id, title, overview, poster_path, popularity, tags} = args
             let item = {title, overview, poster_path, popularity, tags}
             let {data} = await axios.put(`http://localhost:5002/tv/${id}`, item)
             return data
         },
         async deleteEpisode(_, args) {
-            redis.del('series')
+            await redis.del('series')
             let {id} = args
             let {data} = await axios.delete(`http://localhost:5002/tv/${id}`)
             return data

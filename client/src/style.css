@@ -1,0 +1,482 @@
+body {
+  margin: 0;
+}
+
+.success {
+  background-color: green;
+}
+
+.fail {
+  background-color: red;
+}
+
+.landing {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url("./images/pexels-dmitry-demidov-3921000.jpg") no-repeat center fixed;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+  font-family: "Viga", sans-serif;
+}
+.landing .landing-content {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  text-align: center;
+  align-items: center;
+  height: 97vh;
+}
+.landing .landing-content .intro {
+  grid-column: 1/2;
+}
+.landing .landing-content .intro h1 {
+  margin: 0;
+  font-family: Audiowide, cursive;
+  font-size: 6vw;
+}
+.landing .landing-content .intro h6 {
+  margin: 0;
+  font-size: 2vw;
+  font-family: Audiowide, cursive;
+  letter-spacing: 0.8vw;
+}
+.landing .landing-content .intro button {
+  margin-top: 1em;
+  background-color: green;
+  border: none;
+  font-size: 32px;
+  padding: 0.5em;
+  border-radius: 50px;
+}
+.landing .landing-content .intro button a {
+  color: white;
+  font-family: "Viga", sans-serif;
+  text-decoration: none;
+}
+.landing .landing-content .preview {
+  grid-column: 2/2;
+}
+
+.posters {
+  margin-top: 2em;
+}
+
+.index__container___1eyTh.index__chain___2Fk0I {
+  margin-left: 1em;
+  align-items: flex-start;
+}
+
+nav {
+  padding: 1em;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 95vw;
+  object-fit: cover;
+  color: white;
+}
+nav ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav ul span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav ul span #film {
+  animation: animation 1000ms linear both;
+}
+nav ul span img {
+  padding-right: 5em;
+  padding-left: 1em;
+}
+nav ul span li {
+  list-style-type: none;
+  animation: animation 1000ms linear both 1000ms;
+}
+nav ul span li a {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
+nav ul span li a span img {
+  padding: 0;
+  padding-right: 0.5em;
+  margin-left: 6em;
+}
+nav ul span li a span p {
+  padding: 0;
+  margin: 0;
+}
+nav ul span li a:hover span p {
+  border-bottom: 2px white solid;
+}
+nav ul span .list {
+  padding-right: 1em;
+}
+nav ul span .crumb {
+  padding-right: 2em;
+}
+nav ul span h1 {
+  font-family: Audiowide, cursive;
+  font-size: 32px;
+  margin: 0;
+  justify-content: center;
+}
+nav ul span .the-font h3 {
+  display: inline-block;
+  font-size: 12px;
+  margin: 0;
+  padding-top: 4px;
+  padding-bottom: 10px;
+  margin-right: 4px;
+  border-bottom: 4px white solid;
+}
+nav ul span span h4 {
+  margin-bottom: 0;
+}
+
+.no-file {
+  text-align: center;
+}
+
+.home {
+  min-height: 100vh;
+  background: url("../src/images/body-bg.gif") fixed;
+  color: white;
+}
+.home .home-page {
+  padding-top: 13vh;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.home .home-page .sub-nav {
+  border-top: 2px dashed rgba(255, 255, 255, 0.5);
+  padding-top: 10px;
+  border-bottom: 2px dashed rgba(255, 255, 255, 0.5);
+  padding-bottom: 10px;
+}
+.home .home-page .sub-nav .list-title {
+  text-align: center;
+  margin: 0;
+}
+.home .home-page .add-home {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.home .home-page .add-home a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.home .home-page .add-home a h1 {
+  margin: 0;
+  font-size: 20px;
+  color: white;
+}
+.home .home-page .add-home a img {
+  margin-right: 1vw;
+}
+.home .home-page .add-home a:hover h1 {
+  color: green;
+}
+
+.add {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../src/images/pexels-engin-akyurt-1435833.jpg") no-repeat fixed;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+}
+.add .add-content {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  height: 100vh;
+}
+.add .add-content .add-intro {
+  grid: 1/2;
+  padding-left: 10vw;
+}
+.add .add-content .add-intro h1 {
+  font-family: Audiowide, cursive;
+  margin: 0;
+  font-size: 4vw;
+}
+.add .add-content .add-intro h2 {
+  font-family: Audiowide, cursive;
+  margin: 0;
+  letter-spacing: 10px;
+}
+.add .add-content .add-form {
+  grid: 2/2;
+  padding-left: 5vw;
+}
+.add .add-content .add-form label {
+  font-family: "Viga", sans-serif;
+  font-size: 1.2em;
+}
+.add .add-content .add-form input {
+  background: none;
+  font-family: "Viga", sans-serif;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: 25vw;
+  border: none;
+  border-bottom: 1px white solid;
+  color: white;
+  margin-right: 1em;
+}
+.add .add-content .add-form button {
+  cursor: pointer;
+}
+.add .add-content .add-form .btn {
+  min-width: 10vw;
+  float: right;
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 2vw;
+  margin-top: 5vh;
+  font-family: "Viga", sans-serif;
+}
+.add .add-content .add-form .btn1 {
+  margin-right: 5vw;
+}
+.add .add-content .add-form .btn-2 {
+  min-width: 10vw;
+  float: right;
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 2vw;
+  margin-top: 5vh;
+  margin-right: 20vw;
+  font-family: "Viga", sans-serif;
+}
+
+.container {
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+}
+.container .container-content {
+  width: 75vw;
+}
+.container .container-content .wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  grid-gap: 10px;
+}
+.container .container-content .wrapper .movie {
+  padding-bottom: 10vh;
+  width: 150px;
+  height: 200px;
+}
+.container .container-content .wrapper .movie img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+.container .container-content .wrapper .movie h5 {
+  padding-left: 0.5vw;
+  margin: 0;
+  margin-top: 2vh;
+}
+.container .container-list {
+  flex-direction: row;
+  width: 75vw;
+}
+
+.checked {
+  color: orange;
+}
+
+.container-overview {
+  width: 150px;
+  height: 200px;
+  position: absolute;
+  margin: 0;
+  text-align: center;
+  align-items: center;
+}
+.container-overview .overview {
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 150px;
+  height: 200px;
+  z-index: 10;
+}
+.container-overview .overview h5 {
+  color: #c7ca0e;
+}
+.container-overview .overview .edit-delete {
+  padding: 10px;
+  padding-bottom: 10px;
+}
+.container-overview .overview .edit-delete .edit {
+  float: left;
+}
+.container-overview .overview .edit-delete .delete {
+  float: right;
+}
+
+.container-overview:hover .overview {
+  visibility: visible;
+}
+
+.tag small {
+  display: inline;
+  padding: 4px;
+  border: 1px solid white;
+  border-radius: 8px;
+  margin: 5px;
+}
+.tag small button {
+  background-color: transparent;
+  border: none;
+}
+
+.buttons {
+  display: flex;
+}
+
+.carousel .slide img {
+  max-width: 50%;
+}
+
+.carousel .slide {
+  background-color: transparent;
+}
+
+.list-item {
+  width: 75%;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  height: 40vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5vh;
+  border-left: silver 10px solid;
+  display: flex;
+  align-items: flex-start;
+  color: black;
+  font-family: "Viga", sans-serif;
+}
+.list-item .list-image {
+  height: 40vh;
+}
+.list-item .list-content {
+  width: 100%;
+}
+.list-item .list-content .content-title {
+  border-bottom: 2px dashed rgba(0, 0, 0, 0.5);
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.list-item .list-content .content-title h4 {
+  margin: 0.5em 10px;
+}
+.list-item .list-content .content-title small {
+  display: inline-block;
+  color: white;
+  margin: 0 10px;
+  border: 1px transparent solid;
+  padding: 0.3em;
+  border-radius: 10%;
+  background-color: green;
+}
+.list-item .list-content .description {
+  margin: 0 10px;
+}
+.list-item .list-content .description h5 {
+  margin: 5px 0;
+}
+.list-item .list-content .description p {
+  margin: 0;
+  font-size: 0.7em;
+}
+
+@keyframes animation {
+  0% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -100, 0, 1);
+  }
+  3.2% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -67.61, 0, 1);
+  }
+  6.31% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -46.162, 0, 1);
+  }
+  12.51% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -21.364, 0, 1);
+  }
+  18.82% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -9.667, 0, 1);
+  }
+  25.03% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -4.383, 0, 1);
+  }
+  37.54% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.859, 0, 1);
+  }
+  50.05% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.159, 0, 1);
+  }
+  100% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+}
+.logo {
+  animation: logoAnimate 2000ms linear both;
+}
+
+@keyframes logoAnimate {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.intro {
+  -webkit-animation: slide-in-bck-left 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-bck-left 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.intro button {
+  animation: logoAnimate 2000ms linear both 1000ms;
+}
+
+@-webkit-keyframes slide-in-bck-left {
+  0% {
+    -webkit-transform: translateZ(700px) translateX(-400px);
+    transform: translateZ(700px) translateX(-400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateX(0);
+    transform: translateZ(0) translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-bck-left {
+  0% {
+    -webkit-transform: translateZ(700px) translateX(-400px);
+    transform: translateZ(700px) translateX(-400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateX(0);
+    transform: translateZ(0) translateX(0);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
